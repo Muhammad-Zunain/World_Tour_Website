@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/de9e1561cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>World Tour</title>
+</head>
+<body>
+    <section class="section1" id="home">
+        <div class="container">
+            <div class="logo"><h1>Adventure</h1></div>
+        </div>
+        <nav id="sidenavbar">
+            <div class="humburgerMenu">
+                <ul>
+                    <li><a href="#home" class="special">Home</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="" class="btn">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="humburger">
+            <img src="./img/menu-btn.png" id="menu">
+        </div>
+
+        <div class="content-container">
+            <h3>
+                Explore The Colorful World
+            </h3>
+            <h1>A wonderful gift </h1>
+            <a href="" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section class="section2" id="tour">
+        <div class="heading-content">
+            <h1>Upcoming Events</h1>
+        </div>
+        <div class="content-contanier container">
+            <div class="Box box-section2">
+                <div class="image-container">
+                    <img src="./img/img1.png" alt="Beautifil Mountain Trip">
+                    <div class="style-text">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, aut!.Lorem ipsum dolor sit amet.</p>
+                        <a href="" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <h3>Everest Camp Trip</h3>
+            </div>
+            <div class="Box box-section2">
+                <div class="image-container">
+                    <img src="./img/img2.png" alt="Beautifil Mountain Trip">
+                    <div class="style-text">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, aut!.Lorem ipsum dolor sit amet.</p>
+                        <a href="" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <h3>Walking Holiday</h3>
+            </div>
+
+        </div>
+    </section>
+    <section class="section3" id="explore">
+        <div class="contents-container ">
+            <h2>Explore The World </h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta natus commodi similique magnam rerum praesentium, minus nostrum eius repellendus deserunt. Veniam suscipit ducimus corrupti! Maxime dolorum nobis iste officiis ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quae?</p>
+            <a href="" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section class="section4 container" id="about">
+        <div class="text-container ">
+            <div class="text">
+                <h1>Upcoming <br>tours & <br>destination</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus vitae, eligendi veniam id enim deserunt facilis est doloremque asperiores laudantium aut quam numquam vel soluta quaerat odit earum rerum et.</p>
+                <a href="" class="btn">Learn More</a>
+            </div>
+            <div class="img">
+                <img src="./img/img3.png" alt="">
+                <img src="./img/img4.png" alt="">
+                <img src="./img/img5.png" alt="">
+                <img src="./img/img6.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="icon-div container">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <p>&copy; copyright 2023 | MZ Web Designer | All Rigths Reserved</p>
+        </div>
+    </footer>
+    <script>
+        var humburger = document.getElementById("humburger")
+        var sidenavbar = document.getElementById("sidenavbar")
+        var menu = document.getElementById("menu")
+
+        humburger.onclick = function(){
+            if(sidenavbar.style.top == "-2000px"){
+                sidenavbar.style.top="0";
+                menu.src = "./img/close.png";
+            }
+            else{
+                sidenavbar.style.top = "-2000px";
+                menu.src = "./img/menu-btn.png";
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+    
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+    
+            // Store hash
+            var hash = this.hash;
+    
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+    
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script>
+</body>
+</html>
